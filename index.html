@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason's Library</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="books.js"></script>
+</head>
+<body>
+    <div class="jumbotron container-md border border-primary bg-warning mt-3">
+        <h1 class="display-4 p-1">Welcome to Jason's <small class="text-muted">nothing fancy</small> Library Web App</h1>
+        <p class="lead">This is a simple web app that is styled with Bootstrap 5 CSS/JS and uses a basic JavaScript backend to store and retrieve your books.</p>
+        <hr class="my-4">
+        <p>The point of this exercise is to show off some basic CRUD skills for a web app. Nothing fancy.</p>
+        
+      </div>
+      <div class="container-sm p-2">
+        <button id="show" type="button" class="btn btn-primary" onclick="showBookInput()">
+            Click to add a book
+        </button>
+      </div>
+      <div class="container-sm bg-info" id="bookInputFormDiv" style="display: none;">
+            <form>
+                <div class="form-group p-1">
+                    <p class="display-6 p-1">Book input form</p>
+                    <div class="form-group mb-2">
+                        <label for="bookNameInput">Book Name</label>
+                        <input type="text" class="form-control" id="bookNameInput" placeholder="Example: Harry Potter and the Sorcerer's Stone">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="authorNameInput">Author Name</label>
+                        <input type="text" class="form-control" id="authorNameInput" placeholder="Example: J.K. Rowling">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="pageNumInput">Page Number</label>
+                        <input type="number" class="form-control" id="pageNumInput" placeholder="Example: 309">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="readCheckInput">
+                        <label class="form-check-label" for="readCheckInput">
+                          Book has been read.
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+      </div>
+      <div class="container-md mt-2">
+        <h2 class="display-5">
+            Books:
+        </h2>
+        <div class="container-fluid">
+            <table class="table" id="bookList">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author Name</th>
+                    <th scope="col">Number of Pages</th>
+                    <th scope="col">Read?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mar</td>
+                    <td>Otto</td>
+                    <td>999</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>123</td>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>456</td>
+                    <td>Yes</td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+      </div>
+</body>
+</html>
